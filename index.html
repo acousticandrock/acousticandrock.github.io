@@ -27,7 +27,7 @@
     <!-- Header -->
     <header id="header">
       <div class="logo">
-        <span class="icon solid fa-guitar"></span>
+        <span class="icon solid fa-music"></span>
       </div>
       <div class="content">
         <div class="inner">
@@ -408,12 +408,14 @@
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    setInterval(function () {
+    var interval = setInterval(function () {
       var one = document.getElementById("eguitar");
       var two = document.getElementById("kb");
       style = window.getComputedStyle(one);
       wdt = one.offsetWidth;
       two.style.width = wdt + "px";
+      console.log(wdt);
+      if (wdt > 0) {clearInterval(interval);}
     }, 10);
   </script>
 
